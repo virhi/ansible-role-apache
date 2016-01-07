@@ -40,3 +40,4 @@
 - name: Enable conf
   sudo: yes
   shell: a2ensite {{ ws_vhost_env }}.conf
+  notify: restart apache
