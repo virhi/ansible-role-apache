@@ -27,3 +27,11 @@
   template: src={{ apache24_template }} dest={{ ws_vhost_path }}/{{ ws_vhost_env }}.conf
   notify: restart apache
   when: apache_version.stdout.find('Apache/2.2.') != -1
+
+- name: Disable default conf
+  sudo: yes
+  shell: a2dissite 000-default.conf
+
+- name: Enable conf
+  sudo: yes
+  shell: a2ensite {{ ws_vhost_env }}.conf
