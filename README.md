@@ -35,11 +35,11 @@ Including an example of how to use your role (for instance, with variables passe
       roles:
        - {
         role: virhi.apache,
-        apache24_template: ../../virhi.symfony/templates/vhost24.symfony.conf.tpl,
-        apache22_template: ../../virhi.symfony/templates/vhost22.symfony.conf.tpl,
+        apache24_template: template.tpl,
+        apache22_template: template.tpl,
         ws_vhost_env: dev,
         servername: dev.vansible.local,
-        doc_root: /vagrant/symfony/web,
+        doc_root: /vagrant/project/web,
         directory_index: app_dev.php
       }
 
